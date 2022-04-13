@@ -1,8 +1,25 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>홈페이지 이름</title>
+        <link href="./practice.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript">
+            function doSomething(){
+                let a = document.getElementById('InputA').value;
+                let b = document.getElementById('InputB').value;
+                document.getElementById("valueA").innerHTML = a;
+                document.getElementById("valueB").innerHTML = b;
+                document.getElementById("valueC").innerHTML = Number(a) + Number(b);
+            }
+
+            function whatTimeIsIt() {
+                alert(new Date());
+            }
+        </script>
     </head>
+    
     <body>
         <nav>
             <a href="./index.html">Home</a>
@@ -16,6 +33,16 @@
         <h3>세 번째 크기의 헤드라인</h3>
         <h4>네 번째 크기의 헤드라인</h4>
         <h5>다섯 번째 크기의 헤드라인</h5>
+
+        <button onclick="whatTimeIsIt()">현재시간</button>
+        <hr/>
+
+        <label for="inputA">a</label>
+        <input id="inputA" value="1" onkeyup="doSomething()">
+        <label for="inputB">b</label>
+        <input id="inputB" value="2" onkeyup="doSomething()">
+
+        <p><span id="valueA">1</span> + <span id="valueB">2</span> = <span id="valueC">3</span>입니다.</p>
         <p>문단은 p로 쓰세요.</p>
         <a href="http://www.google.com">Go to Google</a>
     </body>
